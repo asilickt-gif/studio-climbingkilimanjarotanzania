@@ -5,7 +5,29 @@ import {schemaTypes} from './schemaTypes'
 
 // Singleton document types: pinned in the structure with fixed IDs,
 // excluded from the "create new" menus and the generic type lists.
-const singletonTypes = new Set(['siteSettings', 'blogIndexPage', 'destinationsPage'])
+const singletonTypes = new Set([
+  'siteSettings',
+  'blogIndexPage',
+  'destinationsPage',
+  'aboutPage',
+  'contactPage',
+  'requestQuotePage',
+  'zanzibarPage',
+  'tanzaniaSafariPage',
+  'safariToursPage',
+])
+
+const singletonListItems: [type: string, title: string][] = [
+  ['siteSettings', 'Site Settings'],
+  ['blogIndexPage', 'Blog Index Page'],
+  ['destinationsPage', 'Destinations Page'],
+  ['aboutPage', 'About Page'],
+  ['contactPage', 'Contact Page'],
+  ['requestQuotePage', 'Request a Quote Page'],
+  ['zanzibarPage', 'Zanzibar Page'],
+  ['tanzaniaSafariPage', 'Tanzania Safari Page'],
+  ['safariToursPage', 'Safari Tours Page'],
+]
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 
 export default defineConfig({
@@ -21,18 +43,12 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
-            S.listItem()
-              .title('Site Settings')
-              .id('siteSettings')
-              .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
-            S.listItem()
-              .title('Blog Index Page')
-              .id('blogIndexPage')
-              .child(S.document().schemaType('blogIndexPage').documentId('blogIndexPage')),
-            S.listItem()
-              .title('Destinations Page')
-              .id('destinationsPage')
-              .child(S.document().schemaType('destinationsPage').documentId('destinationsPage')),
+            ...singletonListItems.map(([type, title]) =>
+              S.listItem()
+                .title(title)
+                .id(type)
+                .child(S.document().schemaType(type).documentId(type)),
+            ),
             S.divider(),
             ...S.documentTypeListItems().filter(
               (item) => !singletonTypes.has(item.getId() ?? ''),

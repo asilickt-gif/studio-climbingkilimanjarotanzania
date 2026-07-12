@@ -14,6 +14,12 @@ import {tripType} from './documents/tripType'
 import {routeType} from './documents/routeType'
 import {destinationsPageType} from './documents/destinationsPageType'
 import {destinationDetailType} from './documents/destinationDetailType'
+import {aboutPageType} from './documents/aboutPageType'
+import {contactPageType} from './documents/contactPageType'
+import {requestQuotePageType} from './documents/requestQuotePageType'
+import {zanzibarPageType} from './documents/zanzibarPageType'
+import {tanzaniaSafariPageType} from './documents/tanzaniaSafariPageType'
+import {safariToursPageType} from './documents/safariToursPageType'
 
 export const schemaTypes = [
   // objects
@@ -34,4 +40,10 @@ export const schemaTypes = [
   routeType,
   destinationsPageType,
   destinationDetailType,
+  aboutPageType,
+  contactPageType,
+  requestQuotePageType,
+  zanzibarPageType,
+  tanzaniaSafariPageType,
+  safariToursPageType,
 ]
