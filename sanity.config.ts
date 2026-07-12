@@ -15,6 +15,12 @@ const singletonTypes = new Set([
   'zanzibarPage',
   'tanzaniaSafariPage',
   'safariToursPage',
+  'climbingKilimanjaroPage',
+  'homePage',
+  'sharedTripContent',
+  'routesHubPage',
+  'packagesHubPage',
+  'comboHubPage',
 ])
 
 const singletonListItems: [type: string, title: string][] = [
@@ -27,6 +33,12 @@ const singletonListItems: [type: string, title: string][] = [
   ['zanzibarPage', 'Zanzibar Page'],
   ['tanzaniaSafariPage', 'Tanzania Safari Page'],
   ['safariToursPage', 'Safari Tours Page'],
+  ['climbingKilimanjaroPage', 'Climbing Kilimanjaro Page'],
+  ['homePage', 'Home Page'],
+  ['sharedTripContent', 'Shared Trip Content'],
+  ['routesHubPage', 'Routes Hub Page'],
+  ['packagesHubPage', 'Packages Hub Page'],
+  ['comboHubPage', 'Combo Hub Page'],
 ]
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 

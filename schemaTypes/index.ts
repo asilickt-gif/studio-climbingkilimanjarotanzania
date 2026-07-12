@@ -20,6 +20,10 @@ import {requestQuotePageType} from './documents/requestQuotePageType'
 import {zanzibarPageType} from './documents/zanzibarPageType'
 import {tanzaniaSafariPageType} from './documents/tanzaniaSafariPageType'
 import {safariToursPageType} from './documents/safariToursPageType'
+import {climbingKilimanjaroPageType} from './documents/climbingKilimanjaroPageType'
+import {homePageType} from './documents/homePageType'
+import {sharedTripContentType} from './documents/sharedTripContentType'
+import {routesHubPageType, packagesHubPageType, comboHubPageType} from './documents/hubPagesTypes'
 
 export const schemaTypes = [
   // objects
@@ -46,4 +50,10 @@ export const schemaTypes = [
   zanzibarPageType,
   tanzaniaSafariPageType,
   safariToursPageType,
+  climbingKilimanjaroPageType,
+  homePageType,
+  sharedTripContentType,
+  routesHubPageType,
+  packagesHubPageType,
+  comboHubPageType,
 ]
