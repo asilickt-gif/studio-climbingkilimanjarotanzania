@@ -8,6 +8,7 @@ export const aboutPageType = defineType({
   type: 'document',
   icon: UsersIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({
       name: 'hero',

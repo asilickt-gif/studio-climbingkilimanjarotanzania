@@ -12,6 +12,7 @@ export const standardPageType = defineType({
   type: 'document',
   icon: DocumentIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'slug',
       title: 'Slug',

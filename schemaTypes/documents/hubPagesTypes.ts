@@ -8,6 +8,7 @@ export const routesHubPageType = defineType({
   type: 'document',
   icon: ThLargeIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({
       name: 'hero',
@@ -112,6 +113,7 @@ export const packagesHubPageType = defineType({
   type: 'document',
   icon: ThLargeIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'hero',
       title: 'Hero',
@@ -161,6 +163,7 @@ export const comboHubPageType = defineType({
   type: 'document',
   icon: ThLargeIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'intro',
       title: 'Intro',

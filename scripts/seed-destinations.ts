@@ -57,8 +57,9 @@ async function detailToFields(data: DestinationDetailData) {
 
 async function run() {
   await client.createOrReplace({
-    _id: 'destinationsPage',
+    _id: 'destinationsPage-en',
     _type: 'destinationsPage',
+    language: 'en',
     seo: {_type: 'seo', title: destinationsData.seo.title, description: destinationsData.seo.description},
     heading: destinationsData.heading,
     destinations: await Promise.all(

@@ -12,6 +12,7 @@ export const climbingKilimanjaroPageType = defineType({
   type: 'document',
   icon: BoltIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'trustBadges',
       title: 'Trust badges',
@@ -121,6 +122,171 @@ export const climbingKilimanjaroPageType = defineType({
         }),
       ],
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'infoTabs',
+      title: 'Info tabs',
+      description: 'The 6-tab "Route Choices / Comparison / Best Time / Cost / Insights / Guided Climbs" section.',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          name: 'routeChoicesTab',
+          title: 'Route Choices tab',
+          type: 'object',
+          fields: [
+            defineField({name: 'label', title: 'Tab label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'intro', title: 'Intro', type: 'richText', validation: (rule) => rule.required()}),
+            defineField({
+              name: 'faqCards',
+              title: 'FAQ cards',
+              type: 'array',
+              of: [
+                defineArrayMember({
+                  name: 'richFaqCard',
+                  title: 'Card',
+                  type: 'object',
+                  fields: [
+                    defineField({name: 'question', title: 'Question', type: 'string', validation: (rule) => rule.required()}),
+                    defineField({name: 'answer', title: 'Answer', type: 'richText', validation: (rule) => rule.required()}),
+                  ],
+                  preview: {select: {title: 'question'}},
+                }),
+              ],
+              validation: (rule) => rule.min(1),
+            }),
+            defineField({name: 'closingNote', title: 'Closing note', type: 'richText', validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'label'}},
+        }),
+        defineArrayMember({
+          name: 'routesComparisonTab',
+          title: 'Routes Comparison tab',
+          type: 'object',
+          fields: [
+            defineField({name: 'label', title: 'Tab label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'table', title: 'Comparison table', type: 'dataTable', validation: (rule) => rule.required()}),
+            defineField({name: 'noteLabel', title: 'Note label', type: 'string', initialValue: 'NOTE:', validation: (rule) => rule.required()}),
+            defineField({name: 'noteBody', title: 'Note body', type: 'text', rows: 3, validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'label'}},
+        }),
+        defineArrayMember({
+          name: 'bestTimeTab',
+          title: 'Best Time to Climb tab',
+          type: 'object',
+          fields: [
+            defineField({name: 'label', title: 'Tab label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'intro', title: 'Intro', type: 'richText', validation: (rule) => rule.required()}),
+            defineField({
+              name: 'cards',
+              title: 'Cards',
+              type: 'array',
+              of: [
+                defineArrayMember({
+                  name: 'bestTimeCard',
+                  title: 'Card',
+                  type: 'object',
+                  fields: [
+                    defineField({name: 'title', title: 'Title', type: 'string', validation: (rule) => rule.required()}),
+                    defineField({
+                      name: 'bullets',
+                      title: 'Bullets',
+                      type: 'array',
+                      of: [
+                        defineArrayMember({
+                          name: 'bulletItem',
+                          title: 'Bullet',
+                          type: 'object',
+                          fields: [defineField({name: 'body', title: 'Body', type: 'richText', validation: (rule) => rule.required()})],
+                        }),
+                      ],
+                      validation: (rule) => rule.min(1),
+                    }),
+                  ],
+                  preview: {select: {title: 'title'}},
+                }),
+              ],
+              validation: (rule) => rule.min(1),
+            }),
+            defineField({name: 'closingNote', title: 'Closing note', type: 'richText', validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'label'}},
+        }),
+        defineArrayMember({
+          name: 'climbCostTab',
+          title: 'Climb Cost tab',
+          type: 'object',
+          fields: [
+            defineField({name: 'label', title: 'Tab label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'intro', title: 'Intro', type: 'richText', validation: (rule) => rule.required()}),
+            defineField({
+              name: 'items',
+              title: 'Cost factors',
+              type: 'array',
+              of: [defineArrayMember({type: 'string'})],
+              validation: (rule) => rule.min(1),
+            }),
+            defineField({name: 'closingNote', title: 'Closing note', type: 'richText', validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'label'}},
+        }),
+        defineArrayMember({
+          name: 'climbingInsightsTab',
+          title: 'Climbing Insights tab',
+          type: 'object',
+          fields: [
+            defineField({name: 'label', title: 'Tab label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'intro', title: 'Intro', type: 'richText', validation: (rule) => rule.required()}),
+            defineField({
+              name: 'tips',
+              title: 'Tips',
+              type: 'array',
+              of: [
+                defineArrayMember({
+                  name: 'tip',
+                  title: 'Tip',
+                  type: 'object',
+                  fields: [
+                    defineField({name: 'label', title: 'Label', type: 'string', description: 'Short bold lead-in, e.g. "Go Slow:"', validation: (rule) => rule.required()}),
+                    defineField({name: 'description', title: 'Description', type: 'text', rows: 2, validation: (rule) => rule.required()}),
+                  ],
+                  preview: {select: {title: 'label', subtitle: 'description'}},
+                }),
+              ],
+              validation: (rule) => rule.min(1),
+            }),
+            defineField({name: 'closingNote', title: 'Closing note', type: 'text', rows: 2, validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'label'}},
+        }),
+        defineArrayMember({
+          name: 'guidedClimbsTab',
+          title: 'Guided Climbs tab',
+          type: 'object',
+          fields: [
+            defineField({name: 'label', title: 'Tab label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'intro', title: 'Intro', type: 'richText', validation: (rule) => rule.required()}),
+            defineField({
+              name: 'faqs',
+              title: 'FAQs',
+              type: 'array',
+              of: [defineArrayMember({type: 'faqItem'})],
+              validation: (rule) => rule.min(1),
+            }),
+            defineField({name: 'closingNote', title: 'Closing note', type: 'richText', validation: (rule) => rule.required()}),
+            defineField({name: 'ctaLabel', title: 'CTA label', type: 'string', validation: (rule) => rule.required()}),
+            defineField({name: 'ctaHref', title: 'CTA link', type: 'string', validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'label'}},
+        }),
+      ],
+      validation: (rule) => rule.min(1),
     }),
     defineField({
       name: 'reviews',

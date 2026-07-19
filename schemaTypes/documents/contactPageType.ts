@@ -9,6 +9,7 @@ export const contactPageType = defineType({
   type: 'document',
   icon: EnvelopeIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({name: 'pageTitle', title: 'Page title', type: 'string', validation: (rule) => rule.required()}),
     defineField({

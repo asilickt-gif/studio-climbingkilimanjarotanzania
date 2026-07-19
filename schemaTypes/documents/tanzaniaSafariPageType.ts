@@ -8,6 +8,7 @@ export const tanzaniaSafariPageType = defineType({
   type: 'document',
   icon: StarIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({
       name: 'hero',

@@ -9,6 +9,7 @@ export const safariToursPageType = defineType({
   type: 'document',
   icon: SparklesIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({
       name: 'hero',

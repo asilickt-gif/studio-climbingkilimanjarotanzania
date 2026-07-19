@@ -48,8 +48,9 @@ const badges = (typeName: string, items: {title: string; description: string}[])
 
 async function seedShared() {
   await client.createOrReplace({
-    _id: 'sharedTripContent',
+    _id: 'sharedTripContent-en',
     _type: 'sharedTripContent',
+    language: 'en',
     routeTrustBadges: routeTrustBadges.map((b) => ({
       _type: 'routeTrustBadge',
       _key: key(),
@@ -126,8 +127,9 @@ async function seedShared() {
 
 async function seedHubs() {
   await client.createOrReplace({
-    _id: 'routesHubPage',
+    _id: 'routesHubPage-en',
     _type: 'routesHubPage',
+    language: 'en',
     seo: {_type: 'seo', ...routeHubData.seo},
     hero: {...routeHubData.hero},
     ctaBandButtons: routeHubData.ctaBand.buttons.map((b) => ({
@@ -169,8 +171,9 @@ async function seedHubs() {
   console.log('routesHubPage created/replaced')
 
   await client.createOrReplace({
-    _id: 'packagesHubPage',
+    _id: 'packagesHubPage-en',
     _type: 'packagesHubPage',
+    language: 'en',
     hero: {...packageHubHero},
     cards: await Promise.all(
       packageHubCards.map(async (card) => ({
@@ -187,8 +190,9 @@ async function seedHubs() {
   console.log('packagesHubPage created/replaced')
 
   await client.createOrReplace({
-    _id: 'comboHubPage',
+    _id: 'comboHubPage-en',
     _type: 'comboHubPage',
+    language: 'en',
     intro: {
       heading: comboHubIntro.heading,
       body: comboHubIntro.body.map(paragraphBlock),

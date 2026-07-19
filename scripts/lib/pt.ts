@@ -9,6 +9,7 @@ export const key = () => randomUUID().replace(/-/g, '').slice(0, 12)
 export interface RichTextSegment {
   text: string
   bold?: boolean
+  accent?: boolean
   href?: string
 }
 
@@ -41,6 +42,7 @@ export function segmentsToBlock(segments: RichTextSegment[]) {
   for (const segment of segments) {
     const marks: string[] = []
     if (segment.bold) marks.push('strong')
+    if (segment.accent) marks.push('accent')
     if (segment.href) {
       const defKey = key()
       block.markDefs.push({_key: defKey, _type: 'link', href: segment.href})
@@ -54,4 +56,9 @@ export function segmentsToBlock(segments: RichTextSegment[]) {
 /** RichTextSegment[][] (paragraphs of segments) -> PT blocks. */
 export function segmentParagraphsToPt(paragraphs: RichTextSegment[][]) {
   return paragraphs.map(segmentsToBlock)
+}
+
+/** One paragraph of RichTextSegments -> single-block richText array (for richText-typed fields). */
+export function segmentsToRichText(segments: RichTextSegment[]) {
+  return [segmentsToBlock(segments)]
 }

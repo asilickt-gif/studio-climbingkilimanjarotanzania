@@ -35,6 +35,7 @@ export const homePageType = defineType({
   type: 'document',
   icon: HomeIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'hero',
       title: 'Hero',

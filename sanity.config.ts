@@ -1,10 +1,35 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
+import {documentInternationalization} from '@sanity/document-internationalization'
+import {assist} from '@sanity/assist'
 import {schemaTypes} from './schemaTypes'
 
-// Singleton document types: pinned in the structure with fixed IDs,
-// excluded from the "create new" menus and the generic type lists.
+// Locales supported by the content model. The website controls which are
+// publicly live (web repo i18n/routing.ts); the Studio always offers all of
+// them so translations can be prepared before a locale launches.
+const LOCALES = [
+  {id: 'en', title: 'English'},
+  {id: 'fr', title: 'French'},
+  {id: 'de', title: 'German'},
+  {id: 'it', title: 'Italian'},
+  {id: 'es', title: 'Spanish'},
+]
+const DEFAULT_LOCALE = 'en'
+
+// Repeatable document types localized via @sanity/document-internationalization
+// (language field + translation metadata linking).
+const translatableTypes = [
+  'article',
+  'trip',
+  'route',
+  'blogPost',
+  'destinationDetail',
+  'standardPage',
+]
+
+// Singleton document types: localized via fixed per-locale IDs
+// (`<type>-<locale>`), pinned in the structure with create/delete disabled.
 const singletonTypes = new Set([
   'siteSettings',
   'blogIndexPage',
@@ -22,6 +47,7 @@ const singletonTypes = new Set([
   'packagesHubPage',
   'comboHubPage',
 ])
+const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 
 const singletonListItems: [type: string, title: string][] = [
   ['siteSettings', 'Site Settings'],
@@ -40,7 +66,6 @@ const singletonListItems: [type: string, title: string][] = [
   ['packagesHubPage', 'Packages Hub Page'],
   ['comboHubPage', 'Combo Hub Page'],
 ]
-const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 
 export default defineConfig({
   name: 'default',
@@ -59,13 +84,42 @@ export default defineConfig({
               S.listItem()
                 .title(title)
                 .id(type)
-                .child(S.document().schemaType(type).documentId(type)),
+                .child(
+                  S.list()
+                    .title(title)
+                    .items(
+                      LOCALES.map((locale) =>
+                        S.listItem()
+                          .title(`${title} (${locale.id.toUpperCase()})`)
+                          .id(`${type}-${locale.id}`)
+                          .child(
+                            S.document()
+                              .schemaType(type)
+                              .documentId(`${type}-${locale.id}`)
+                              .title(`${title} (${locale.id.toUpperCase()})`),
+                          ),
+                      ),
+                    ),
+                ),
             ),
             S.divider(),
             ...S.documentTypeListItems().filter(
-              (item) => !singletonTypes.has(item.getId() ?? ''),
+              (item) =>
+                !singletonTypes.has(item.getId() ?? '') &&
+                item.getId() !== 'translation.metadata',
             ),
           ]),
+    }),
+    documentInternationalization({
+      supportedLanguages: LOCALES,
+      schemaTypes: translatableTypes,
+    }),
+    assist({
+      translate: {
+        document: {
+          languageField: 'language',
+        },
+      },
     }),
     visionTool(),
   ],
@@ -82,3 +136,5 @@ export default defineConfig({
         : input,
   },
 })
+
+export {DEFAULT_LOCALE, LOCALES, translatableTypes}

@@ -17,6 +17,7 @@ export const tripType = defineType({
   type: 'document',
   icon: PackageIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'category',
       title: 'Category',

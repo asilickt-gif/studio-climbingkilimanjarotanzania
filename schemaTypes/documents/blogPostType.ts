@@ -7,6 +7,7 @@ export const blogPostType = defineType({
   type: 'document',
   icon: EditIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'slug',
       title: 'Slug',

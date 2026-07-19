@@ -16,7 +16,10 @@ export const richTextType = defineType({
       styles: [{title: 'Normal', value: 'normal'}],
       lists: [{title: 'Bullet', value: 'bullet'}],
       marks: {
-        decorators: [{title: 'Bold', value: 'strong'}],
+        decorators: [
+          {title: 'Bold', value: 'strong'},
+          {title: 'Accent (brand color)', value: 'accent'},
+        ],
         annotations: [
           defineArrayMember({
             name: 'link',

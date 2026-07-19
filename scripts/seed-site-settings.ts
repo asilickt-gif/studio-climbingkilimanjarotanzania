@@ -21,8 +21,9 @@ const navLink = (link: {label: string; href: string}) => ({
 
 async function run() {
   await client.createOrReplace({
-    _id: 'siteSettings',
+    _id: 'siteSettings-en',
     _type: 'siteSettings',
+    language: 'en',
     info: {
       name: siteInfo.name,
       tagline: siteInfo.tagline,

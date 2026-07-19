@@ -10,7 +10,7 @@ import {getCliClient} from 'sanity/cli'
 import {homeData} from '../../climbingkilimanjarotanzania/content/home'
 import {climbingKilimanjaroPageData} from '../../climbingkilimanjarotanzania/content/climbing-kilimanjaro-page'
 import type {TourCard} from '../../climbingkilimanjarotanzania/types/home'
-import {key, segmentParagraphsToPt} from './lib/pt'
+import {key, segmentParagraphsToPt, segmentsToRichText} from './lib/pt'
 import {uploadImage} from './lib/assets'
 
 const client = getCliClient({apiVersion: '2026-07-01'})
@@ -57,8 +57,9 @@ async function seedHome() {
   }
 
   await client.createOrReplace({
-    _id: 'homePage',
+    _id: 'homePage-en',
     _type: 'homePage',
+    language: 'en',
     hero: {
       exploreLabel: homeData.hero.exploreLabel,
       primaryCtaLabel: homeData.hero.primaryCtaLabel,
@@ -180,8 +181,9 @@ async function seedHome() {
 async function seedClimb() {
   const data = climbingKilimanjaroPageData
   await client.createOrReplace({
-    _id: 'climbingKilimanjaroPage',
+    _id: 'climbingKilimanjaroPage-en',
     _type: 'climbingKilimanjaroPage',
+    language: 'en',
     trustBadges: {
       heading: data.trustBadges.heading,
       badges: data.trustBadges.badges.map((badge) => ({
@@ -233,6 +235,96 @@ async function seedClimb() {
         })),
       ),
     },
+    infoTabs: [
+      {
+        _type: 'routeChoicesTab',
+        _key: key(),
+        label: data.infoTabs.routeChoices.label,
+        heading: data.infoTabs.routeChoices.heading,
+        intro: segmentParagraphsToPt(data.infoTabs.routeChoices.intro),
+        faqCards: data.infoTabs.routeChoices.faqCards.map((card) => ({
+          _type: 'richFaqCard',
+          _key: key(),
+          question: card.question,
+          answer: segmentsToRichText(card.answer),
+        })),
+        closingNote: segmentsToRichText(data.infoTabs.routeChoices.closingNote),
+      },
+      {
+        _type: 'routesComparisonTab',
+        _key: key(),
+        label: data.infoTabs.routesComparison.label,
+        heading: data.infoTabs.routesComparison.heading,
+        table: {
+          _type: 'dataTable',
+          columns: data.infoTabs.routesComparison.table.columns,
+          rows: data.infoTabs.routesComparison.table.rows.map((cells) => ({
+            _type: 'tableRow',
+            _key: key(),
+            cells,
+          })),
+        },
+        noteLabel: data.infoTabs.routesComparison.noteLabel,
+        noteBody: data.infoTabs.routesComparison.noteBody,
+      },
+      {
+        _type: 'bestTimeTab',
+        _key: key(),
+        label: data.infoTabs.bestTime.label,
+        heading: data.infoTabs.bestTime.heading,
+        intro: segmentParagraphsToPt(data.infoTabs.bestTime.intro),
+        cards: data.infoTabs.bestTime.cards.map((card) => ({
+          _type: 'bestTimeCard',
+          _key: key(),
+          title: card.title,
+          bullets: card.bullets.map((bullet) => ({
+            _type: 'bulletItem',
+            _key: key(),
+            body: segmentsToRichText(bullet),
+          })),
+        })),
+        closingNote: segmentsToRichText(data.infoTabs.bestTime.closingNote),
+      },
+      {
+        _type: 'climbCostTab',
+        _key: key(),
+        label: data.infoTabs.climbCost.label,
+        heading: data.infoTabs.climbCost.heading,
+        intro: segmentsToRichText(data.infoTabs.climbCost.intro),
+        items: data.infoTabs.climbCost.items,
+        closingNote: segmentsToRichText(data.infoTabs.climbCost.closingNote),
+      },
+      {
+        _type: 'climbingInsightsTab',
+        _key: key(),
+        label: data.infoTabs.climbingInsights.label,
+        heading: data.infoTabs.climbingInsights.heading,
+        intro: segmentsToRichText(data.infoTabs.climbingInsights.intro),
+        tips: data.infoTabs.climbingInsights.tips.map((tip) => ({
+          _type: 'tip',
+          _key: key(),
+          label: tip.label,
+          description: tip.description,
+        })),
+        closingNote: data.infoTabs.climbingInsights.closingNote,
+      },
+      {
+        _type: 'guidedClimbsTab',
+        _key: key(),
+        label: data.infoTabs.guidedClimbs.label,
+        heading: data.infoTabs.guidedClimbs.heading,
+        intro: segmentsToRichText(data.infoTabs.guidedClimbs.intro),
+        faqs: data.infoTabs.guidedClimbs.faqs.map((faq) => ({
+          _type: 'faqItem',
+          _key: key(),
+          question: faq.question,
+          answer: faq.answer,
+        })),
+        closingNote: segmentsToRichText(data.infoTabs.guidedClimbs.closingNote),
+        ctaLabel: data.infoTabs.guidedClimbs.ctaLabel,
+        ctaHref: data.infoTabs.guidedClimbs.ctaHref,
+      },
+    ],
     reviews: {
       tripAdvisor: {
         heading: data.reviews.tripAdvisor.heading,

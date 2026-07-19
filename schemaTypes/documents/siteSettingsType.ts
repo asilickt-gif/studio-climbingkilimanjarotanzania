@@ -12,6 +12,7 @@ export const siteSettingsType = defineType({
   type: 'document',
   icon: CogIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'info',
       title: 'Site info',

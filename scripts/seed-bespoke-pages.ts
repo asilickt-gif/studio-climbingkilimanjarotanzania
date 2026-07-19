@@ -27,8 +27,9 @@ const seo = (data: {seo: {title: string; description: string}}) => ({
 
 async function run() {
   await client.createOrReplace({
-    _id: 'aboutPage',
+    _id: 'aboutPage-en',
     _type: 'aboutPage',
+    language: 'en',
     seo: seo(aboutData),
     hero: {
       heading: aboutData.hero.heading,
@@ -54,8 +55,9 @@ async function run() {
   console.log('aboutPage created/replaced')
 
   await client.createOrReplace({
-    _id: 'contactPage',
+    _id: 'contactPage-en',
     _type: 'contactPage',
+    language: 'en',
     seo: seo(contactData),
     pageTitle: contactData.pageTitle,
     hero: {
@@ -80,8 +82,9 @@ async function run() {
   console.log('contactPage created/replaced')
 
   await client.createOrReplace({
-    _id: 'requestQuotePage',
+    _id: 'requestQuotePage-en',
     _type: 'requestQuotePage',
+    language: 'en',
     seo: seo(requestQuoteData),
     hero: {
       heading: requestQuoteData.hero.heading,
@@ -99,8 +102,9 @@ async function run() {
   console.log('requestQuotePage created/replaced')
 
   await client.createOrReplace({
-    _id: 'zanzibarPage',
+    _id: 'zanzibarPage-en',
     _type: 'zanzibarPage',
+    language: 'en',
     seo: seo(zanzibarData),
     hero: {
       heading: zanzibarData.hero.heading,
@@ -120,8 +124,9 @@ async function run() {
   console.log('zanzibarPage created/replaced')
 
   await client.createOrReplace({
-    _id: 'tanzaniaSafariPage',
+    _id: 'tanzaniaSafariPage-en',
     _type: 'tanzaniaSafariPage',
+    language: 'en',
     seo: seo(tanzaniaSafariData),
     hero: {
       eyebrow: tanzaniaSafariData.hero.eyebrow,
@@ -141,8 +146,9 @@ async function run() {
   console.log('tanzaniaSafariPage created/replaced')
 
   await client.createOrReplace({
-    _id: 'safariToursPage',
+    _id: 'safariToursPage-en',
     _type: 'safariToursPage',
+    language: 'en',
     seo: seo(safariToursData),
     hero: {
       eyebrow: safariToursData.hero.eyebrow,

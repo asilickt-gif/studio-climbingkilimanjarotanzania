@@ -14,6 +14,7 @@ export const routeType = defineType({
   type: 'document',
   icon: EarthGlobeIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'slug', title: 'Slug', type: 'slug', validation: (rule) => rule.required()}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({

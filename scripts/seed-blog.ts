@@ -44,8 +44,9 @@ async function postToFields(post: BlogPostData) {
 
 async function run() {
   await client.createOrReplace({
-    _id: 'blogIndexPage',
+    _id: 'blogIndexPage-en',
     _type: 'blogIndexPage',
+    language: 'en',
     seo: {_type: 'seo', title: blogIndexData.seo.title, description: blogIndexData.seo.description},
     heading: blogIndexData.heading,
     intro: blogIndexData.intro,

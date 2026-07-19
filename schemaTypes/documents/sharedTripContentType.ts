@@ -32,6 +32,7 @@ export const sharedTripContentType = defineType({
   type: 'document',
   icon: StackIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({
       name: 'routeTrustBadges',
       title: 'Route trust badges',

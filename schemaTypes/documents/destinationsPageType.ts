@@ -12,6 +12,7 @@ export const destinationsPageType = defineType({
   type: 'document',
   icon: PinIcon,
   fields: [
+    defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({name: 'heading', title: 'Heading', type: 'string', validation: (rule) => rule.required()}),
     defineField({
