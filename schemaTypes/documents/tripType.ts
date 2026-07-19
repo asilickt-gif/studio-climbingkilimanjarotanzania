@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {PackageIcon} from '@sanity/icons/Package'
+import {isSlugUniquePerLanguage} from '../lib/localizedSlug'
 
 const isSafari = ({document}: {document?: {category?: string}}) => document?.category === 'safari'
 
@@ -36,6 +37,7 @@ export const tripType = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      options: {isUnique: isSlugUniquePerLanguage},
       validation: (rule) => rule.required(),
     }),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),

@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {DocumentIcon} from '@sanity/icons/Document'
+import {isSlugUniquePerLanguage} from '../lib/localizedSlug'
 
 /**
  * Simple heading + sections pages: the three legal pages and
@@ -18,6 +19,7 @@ export const standardPageType = defineType({
       title: 'Slug',
       type: 'slug',
       description: 'URL path segment, e.g. "privacy-policy" for /privacy-policy/',
+      options: {isUnique: isSlugUniquePerLanguage},
       validation: (rule) => rule.required(),
     }),
     defineField({

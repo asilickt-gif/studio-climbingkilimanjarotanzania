@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {DocumentTextIcon} from '@sanity/icons/DocumentText'
+import {isSlugUniquePerLanguage} from '../lib/localizedSlug'
 
 /**
  * Unified article type covering the site's three drifted article templates:
@@ -21,6 +22,7 @@ export const articleType = defineType({
       title: 'Slug',
       type: 'slug',
       description: 'URL path segment, e.g. "kilimanjaro-packing-list" for /kilimanjaro-packing-list/',
+      options: {isUnique: isSlugUniquePerLanguage},
       validation: (rule) => rule.required(),
     }),
     defineField({

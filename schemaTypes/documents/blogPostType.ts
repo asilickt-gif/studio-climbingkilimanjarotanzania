@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {EditIcon} from '@sanity/icons/Edit'
+import {isSlugUniquePerLanguage} from '../lib/localizedSlug'
 
 export const blogPostType = defineType({
   name: 'blogPost',
@@ -13,6 +14,7 @@ export const blogPostType = defineType({
       title: 'Slug',
       type: 'slug',
       description: 'URL path segment — posts live at the site root, e.g. /my-post-slug/',
+      options: {isUnique: isSlugUniquePerLanguage},
       validation: (rule) => rule.required(),
     }),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),

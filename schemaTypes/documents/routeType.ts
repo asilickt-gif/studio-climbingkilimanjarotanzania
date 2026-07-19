@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {EarthGlobeIcon} from '@sanity/icons/EarthGlobe'
+import {isSlugUniquePerLanguage} from '../lib/localizedSlug'
 
 /**
  * A Kilimanjaro climbing route (Machame, Lemosho, …) — the legacy
@@ -15,7 +16,7 @@ export const routeType = defineType({
   icon: EarthGlobeIcon,
   fields: [
     defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
-    defineField({name: 'slug', title: 'Slug', type: 'slug', validation: (rule) => rule.required()}),
+    defineField({name: 'slug', title: 'Slug', type: 'slug', options: {isUnique: isSlugUniquePerLanguage}, validation: (rule) => rule.required()}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({
       name: 'name',

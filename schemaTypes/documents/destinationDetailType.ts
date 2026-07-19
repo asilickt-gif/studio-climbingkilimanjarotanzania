@@ -1,5 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {EarthAmericasIcon} from '@sanity/icons/EarthAmericas'
+import {isSlugUniquePerLanguage} from '../lib/localizedSlug'
 
 /**
  * A destination detail page (currently only Serengeti) — hero, overview,
@@ -13,7 +14,7 @@ export const destinationDetailType = defineType({
   icon: EarthAmericasIcon,
   fields: [
     defineField({name: 'language', type: 'string', readOnly: true, hidden: true}),
-    defineField({name: 'slug', title: 'Slug', type: 'slug', validation: (rule) => rule.required()}),
+    defineField({name: 'slug', title: 'Slug', type: 'slug', options: {isUnique: isSlugUniquePerLanguage}, validation: (rule) => rule.required()}),
     defineField({name: 'seo', title: 'SEO', type: 'seo', validation: (rule) => rule.required()}),
     defineField({name: 'name', title: 'Name', type: 'string', validation: (rule) => rule.required()}),
     defineField({
