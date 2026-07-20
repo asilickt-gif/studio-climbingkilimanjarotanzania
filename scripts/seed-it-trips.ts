@@ -1318,6 +1318,215 @@ const lemosho8It: TripIt = {
   hubImage: {src: '/images/packages/hub/card-8-days-lemosho.webp', alt: 'Route Lemosho in 8 giorni'},
 }
 
+const lemosho9It: TripIt = {
+  slug: '9-days-lemosho-route',
+  category: 'package',
+  name: '9 Giorni Route Lemosho',
+  durationDays: 9,
+  seoTitle: '9 Giorni Route Lemosho – Dormire nel Cratere | Climbing Kilimanjaro Tanzania',
+  seoDescription:
+    "Itinerario giorno per giorno reale, prezzi e servizi inclusi per il pacchetto 9 Giorni Route Lemosho, con una rara notte in campeggio all'interno del cratere sommitale del Kilimangiaro.",
+  stopsLine:
+    'Lemosho Gate, Mti Mkubwa Camp, Shira One Camp, Shira Two Camp, Barranco Camp, Karanga Camp, Kosovo Camp, Crater Camp, Uhuru Peak, Mweka Camp, Mweka Gate',
+  priceDisclaimer:
+    "*Il prezzo per persona include: una guida di montagna professionista, le tasse di ingresso al parco, tutti i pernottamenti in campeggio incluso il permesso speciale per il campo nel cratere, i pasti durante il trekking, i trasferimenti da/per l'ingresso del parco e un soggiorno in hotel a Moshi/Arusha dopo la scalata.",
+  overviewBody: [
+    "La route Lemosho è già uno degli itinerari più panoramici e affidabili per scalare il Kilimangiaro, e questo itinerario esteso di nove giorni aggiunge un'esperienza che solo pochi scalatori tentano ogni anno: una notte in campeggio all'interno del cratere sommitale del Kilimangiaro, a poche centinaia di metri da Uhuru Peak. Partendo dal versante occidentale, più tranquillo, della montagna, attraverserai la foresta pluviale, le brughiere d'alta quota e il vasto altopiano dello Shira prima di ricongiungerti con l'itinerario classico verso la vetta sopra Barranco Camp.",
+    "Invece di puntare direttamente alla vetta da un campo alto, questo itinerario aggiunge una notte di acclimatamento extra a Kosovo Camp e una seconda a Crater Camp, a 5.730 m di altitudine, all'interno del cratere del vulcano. Il tempo supplementare trascorso sopra i 4.700 m migliora notevolmente il tuo acclimatamento, e la notte nel cratere ti offre la rara occasione di esplorare la fossa di cenere e il ghiaccio sul fondo del cratere prima di una breve e finale salita all'alba.",
+  ],
+  mapImage: {src: '/images/packages/8-days-lemosho-route/hero.png', alt: 'Mappa della route Lemosho in 9 giorni'},
+  gallery: [
+    {src: '/images/packages/shared/gallery-generic-1.jpg', alt: 'Il Kilimangiaro sopra la savana di acacie'},
+    {src: '/images/packages/shared/approaching-kilimanjaro.jpg', alt: 'Scalatori che si avvicinano alla vetta nella neve'},
+    {src: '/images/packages/8-days-lemosho-route/day2-shira1-camp.jpg', alt: 'Campo Shira sull\'altopiano'},
+    {src: '/images/packages/8-days-lemosho-route/day4-barranco-camp.jpg', alt: 'Barranco Camp'},
+    {src: '/images/packages/9-days-northern-circuit-route/day8-uhuru-peak.webp', alt: 'Cartello della vetta di Uhuru Peak'},
+    {src: '/images/packages/shared/hero-night.jpg', alt: 'Tende sotto la Via Lattea vicino alla vetta del Kilimangiaro'},
+  ],
+  itinerary: [
+    arrivalIt,
+    {
+      day: 1,
+      label: 'Da Lemosho Gate a Mti Mkubwa Camp',
+      location: 'Lemosho Gate (2.300 m) → Mti Mkubwa Camp (2.800 m)',
+      meta: ['Dislivello in salita: 500 m (1.640 piedi)', 'Durata: 3 ore'],
+      body: [
+        "Dopo colazione, un viaggio in auto di circa tre-quattro ore da Arusha ti porta a Lemosho Gate, sul versante occidentale del Kilimangiaro. Completata la registrazione, segui il sentiero forestale verso est — conosciuto localmente come Chamber's Route — attraverso una fitta foresta pluviale fino a Mti Mkubwa, o \"Big Tree Camp\", la tua prima notte sulla montagna.",
+      ],
+      overnightStay: 'Mti Mkubwa Camp',
+      image: {src: '/images/packages/8-days-lemosho-route/day1-mti-mkubwa-camp.jpg', alt: 'Mti Mkubwa Camp'},
+      secondImage: {
+        src: '/images/packages/8-days-lemosho-route/day1-londorossi-gate.jpg',
+        alt: 'Punto di registrazione di Londorossi Gate',
+      },
+    },
+    {
+      day: 2,
+      label: 'Da Mti Mkubwa Camp a Shira One Camp',
+      location: 'Mti Mkubwa Camp (2.800 m) → Shira One Camp (3.500 m)',
+      meta: ['Dislivello in salita: 700 m (2.300 piedi)', 'Durata: 5-6 ore'],
+      body: [
+        "Il sentiero sale con costanza fuori dalla foresta pluviale verso l'erica gigante e la brughiera. È una giornata intera con un guadagno di quota significativo, quindi mantieni il tuo ritmo e bevi molta acqua. Ci si ferma per il pranzo vicino alla cresta sotto il cratere dello Shira, prima di proseguire verso l'altopiano dello Shira, ad alta quota, dove avrai le prime viste ravvicinate sul Kibo, il cono vulcanico centrale del Kilimangiaro.",
+      ],
+      overnightStay: 'Shira One Camp',
+      image: {src: '/images/packages/8-days-lemosho-route/day2-shira1-camp.jpg', alt: 'Shira One Camp'},
+      secondImage: {src: '/images/packages/8-days-lemosho-route/day2-shira1-2.jpg', alt: 'Altopiano dello Shira'},
+    },
+    {
+      day: 3,
+      label: 'Da Shira One Camp a Shira Two Camp',
+      location: 'Shira One Camp (3.500 m) → Shira Two Camp (3.900 m)',
+      meta: ['Dislivello in salita: 400 m (1.310 piedi)', 'Durata: 4-5 ore'],
+      body: [
+        "Una giornata più tranquilla attraverso il vasto altopiano dello Shira, passando vicino alla formazione rocciosa della Cattedrale dello Shira, con ampie vedute sull'altopiano, sulla montagna e sulle pianure sottostanti. Dopo il pranzo al campo, la maggior parte dei gruppi effettua una breve camminata di acclimatamento di circa un'ora, guadagnando un po' di quota extra prima di tornare a dormire a Shira Two.",
+      ],
+      overnightStay: 'Shira Two Camp',
+      image: {src: '/images/packages/8-days-lemosho-route/day3-shira2-camp.jpg', alt: 'Shira Two Camp'},
+      secondImage: {src: '/images/packages/8-days-lemosho-route/day3-shira2-2.jpg', alt: "Vedute dell'altopiano dello Shira"},
+    },
+    {
+      day: 4,
+      label: 'Da Shira Two Camp a Barranco Camp via Lava Tower',
+      location: 'Shira Two Camp (3.900 m) → Lava Tower (4.640 m) → Barranco Camp (3.950 m)',
+      meta: ['Dislivello in salita: 740 m (2.430 piedi)', 'Dislivello in discesa: 690 m (2.260 piedi)', 'Durata: 7 ore'],
+      body: [
+        "Una giornata impegnativa ma gratificante. Il sentiero sale con costanza fino alla suggestiva torre vulcanica di Lava Tower, dove ci si ferma per un pranzo caldo a oltre 4.600 m — un ottimo acclimatamento per quello che verrà. Da lì, il sentiero scende nella rigogliosa valle di Barranco, con vedute sulla Breach Wall e sui ghiacciai del versante meridionale del Kilimangiaro lungo il percorso.",
+      ],
+      overnightStay: 'Barranco Camp',
+      image: {src: '/images/packages/8-days-lemosho-route/day4-barranco-camp.jpg', alt: 'Barranco Camp'},
+      secondImage: {src: '/images/packages/8-days-lemosho-route/day4-barranco-wall.webp', alt: 'Barranco Wall'},
+    },
+    {
+      day: 5,
+      label: 'Da Barranco Camp a Karanga Camp',
+      location: 'Barranco Camp (3.950 m) → Karanga Camp (4.050 m)',
+      meta: ['Dislivello in salita: 100 m (330 piedi)', 'Durata: 4-5 ore'],
+      body: [
+        "La giornata inizia con la Barranco Wall — un'arrampicata di 300 m che sembra intimidatoria ma è gestibile con l'aiuto della guida, e ripaga con la vista del ghiacciaio Heim che appare sul versante meridionale del Kilimangiaro. Dalla cima, il sentiero prosegue verso est sotto i ghiacciai Decken e Rebmann fino a Karanga Camp, appollaiato sopra la valle di Karanga.",
+      ],
+      overnightStay: 'Karanga Camp',
+      image: {src: '/images/packages/8-days-lemosho-route/day5-karanga-camp.jpg', alt: 'Karanga Camp'},
+      secondImage: {src: '/images/packages/8-days-lemosho-route/day5-karanga-2.webp', alt: 'Valle di Karanga'},
+    },
+    {
+      day: 6,
+      label: 'Da Karanga Camp a Kosovo Camp',
+      location: 'Karanga Camp (4.050 m) → Kosovo Camp (4.900 m)',
+      meta: ['Dislivello in salita: 850 m (2.790 piedi)', 'Durata: 4 ore'],
+      body: [
+        "Una giornata volutamente breve, inserita esclusivamente per l'acclimatamento in vista del tentativo di vetta. Kosovo Camp si trova notevolmente più in alto rispetto al consueto Barafu Camp usato negli itinerari più brevi, e questa quota extra — unita a una notte di riposo anticipata — fa una reale differenza su come ti sentirai il giorno della vetta.",
+      ],
+      overnightStay: 'Kosovo Camp',
+      image: {
+        src: '/images/packages/8-days-lemosho-route/day6-barafu-camp.jpg',
+        alt: "Campo nel deserto alpino d'alta quota sotto la vetta",
+      },
+      secondImage: {
+        src: '/images/packages/8-days-lemosho-route/day6-barafu-2.jpg',
+        alt: 'Sentiero attraverso il deserto alpino',
+      },
+    },
+    {
+      day: 7,
+      label: 'Da Kosovo Camp a Crater Camp via Stella Point',
+      location: 'Kosovo Camp (4.900 m) → Stella Point (5.756 m) → Crater Camp (5.730 m)',
+      meta: ['Dislivello in salita: 830 m (2.720 piedi)', 'Durata: 5-6 ore'],
+      body: [
+        "Questo è il cuore del viaggio. Dopo una colazione mattutina, si sale tra ghiaie pesanti fino a Stella Point, sul bordo del cratere — mentalmente e fisicamente il tratto più duro dell'intero itinerario. Da lì, si scende per circa 30 minuti all'interno del cratere stesso, dove il campo viene allestito a 5.730 m. Nel pomeriggio libero, la maggior parte dei gruppi esplora la fossa di cenere e il ghiaccio sul fondo del cratere prima di una cena indimenticabile osservando il tramonto dal tetto dell'Africa.",
+      ],
+      overnightStay: 'Crater Camp (all\'interno del cratere sommitale del Kilimangiaro)',
+      image: {src: '/images/packages/shared/hero-night.jpg', alt: 'Campeggio sotto le stelle vicino alla vetta del Kilimangiaro'},
+    },
+    {
+      day: 8,
+      label: 'Da Crater Camp a Uhuru Peak e poi a Mweka Camp',
+      location: 'Crater Camp (5.730 m) → Uhuru Peak (5.896 m) → Mweka Camp (3.100 m)',
+      meta: ['Dislivello in salita: 166 m (545 piedi)', 'Dislivello in discesa: 2.796 m (9.175 piedi)', 'Durata: 10-11 ore'],
+      body: [
+        "Dato che dormi già vicino alla vetta, la salita del giorno verso Uhuru Peak è breve — circa novanta minuti — e calcolata per arrivare all'alba. Dopo aver festeggiato nel punto più alto del continente, inizia il vero lavoro: una lunga discesa passando di nuovo per Kosovo Camp fino a Mweka Camp, con quasi 2.800 m di dislivello in discesa nel corso della giornata.",
+      ],
+      overnightStay: 'Mweka Camp',
+      image: {
+        src: '/images/packages/9-days-northern-circuit-route/day8-uhuru-peak.webp',
+        alt: "Cartello della vetta di Uhuru Peak, il tetto dell'Africa",
+      },
+      secondImage: {src: '/images/packages/8-days-lemosho-route/day7-mweka-camp.jpg', alt: 'Mweka Camp'},
+    },
+    {
+      day: 9,
+      label: 'Da Mweka Camp a Mweka Gate, trasferimento ad Arusha',
+      location: 'Mweka Camp (3.100 m) → Mweka Gate (1.640 m)',
+      meta: ['Dislivello in discesa: 1.460 m (4.790 piedi)', 'Durata: 3-4 ore'],
+      body: [
+        "Un'ultima facile camminata attraverso la foresta pluviale fino a Mweka Gate, dove il tuo team si riunirà per una cerimonia di saluto prima dei saluti finali e del ritiro del certificato di vetta. Dall'ingresso del parco, un breve trasferimento ti riporta al tuo hotel ad Arusha per una doccia calda e un meritato riposo.",
+      ],
+      overnightStay: 'Arusha',
+      image: {src: '/images/packages/8-days-lemosho-route/day8-mweka-gate.jpg', alt: 'Mweka Gate'},
+    },
+    departureIt,
+  ],
+  includes: [
+    "Tasse di ingresso / diritti di ammissione",
+    'Tasse di conservazione',
+    'Permesso speciale per il campo nel cratere',
+    "Tutte le attività menzionate nell'itinerario",
+    "Tutti i pernottamenti indicati nell'itinerario",
+    'Tutti i trasporti',
+    'Tutte le tasse / IVA 18%',
+    'Trasferimento aeroportuale di andata e ritorno',
+    "Tutti i pasti indicati nell'itinerario",
+  ],
+  excludes: excludesVariantBIt,
+  faqHeading: 'FAQ Route Lemosho in 9 giorni',
+  faqIntro:
+    "Hai domande su come dormire nel cratere del Kilimangiaro? Consulta le nostre FAQ sulla route Lemosho in 9 giorni qui sotto per risposte chiare e utili. Se non trovi quello che cerchi, non esitare a contattarci — i nostri esperti di montagna di Asili Climbing Kilimanjaro sono qui per aiutarti a pianificare un'avventura in vetta sicura, riuscita e indimenticabile.",
+  faqs: [
+    {
+      question: 'In cosa differisce la route Lemosho in 9 giorni dalla versione standard in 8 giorni?',
+      answer:
+        "Questo itinerario aggiunge una notte extra in quota — Kosovo Camp, invece di andare direttamente a un campo per la notte di vetta — più una notte trascorsa in campeggio all'interno del cratere sommitale del Kilimangiaro, a 5.730 m, prima di una breve salita all'alba verso Uhuru Peak. Il giorno extra in quota migliora sensibilmente l'acclimatamento e le probabilità di successo, e il campo nel cratere è un'esperienza che pochissimi scalatori hanno l'occasione di vivere.",
+    },
+    {
+      question: 'È sicuro dormire nel cratere a 5.730 m?',
+      answer:
+        "Sì, con la giusta preparazione. Fa freddo — ben sotto lo zero di notte — e la quota richiede che tu sia già ben acclimatato al tuo arrivo. Le nostre guide portano ossigeno supplementare e un pulsossimetro per monitorare tutti due volte al giorno, e chiunque mostri segni di mal di montagna viene accompagnato subito a valle.",
+    },
+    {
+      question: 'Serve un permesso speciale per campeggiare nel cratere?',
+      answer:
+        "Sì. Il campeggio nel cratere richiede un permesso separato dal Parco Nazionale del Kilimangiaro, oltre alle normali tasse di parco, e i posti disponibili sono limitati. Ci occupiamo noi della richiesta del permesso come parte di questo pacchetto.",
+    },
+    {
+      question: 'Quanto è impegnativo questo itinerario rispetto agli altri del Kilimangiaro?',
+      answer:
+        "È uno dei nostri itinerari più impegnativi, principalmente per il tempo prolungato trascorso sopra i 4.700 m e la lunga discesa nel giorno della vetta. Detto questo, l'acclimatamento extra inserito nel programma — inclusa la notte a Kosovo Camp — ti dà un vantaggio reale rispetto agli itinerari più brevi, e una precedente esperienza in alta quota, pur non essendo obbligatoria, è utile.",
+    },
+    {
+      question: "Qual è il periodo migliore dell'anno per questo trekking?",
+      answer:
+        "Le stagioni secche — da gennaio a metà marzo e da giugno a ottobre — offrono i cieli più limpidi e le migliori condizioni per la notte nel cratere, dove una notte calma e serena fa tutta la differenza in termini di comfort e panorami.",
+    },
+    {
+      question: 'Quante persone ci saranno nel mio gruppo?',
+      answer:
+        "Organizziamo questo itinerario in piccoli gruppi, in genere tra 2 e 10 escursionisti, supportati da un team completo di guide, un cuoco e portatori.",
+    },
+    {
+      question: "Che tipo di alloggio si usa sulla montagna?",
+      answer:
+        "Dormirai in solide tende da montagna quattro stagioni su materassini di qualità ogni notte, incluso a Crater Camp. Il nostro team monta e smonta il campo ogni giorno in modo che sia pronto al tuo arrivo.",
+    },
+    {
+      question: 'Mi servirà un sacco a pelo più caldo per la notte nel cratere?',
+      answer:
+        "Consigliamo vivamente un sacco a pelo certificato per almeno -15 °C, idealmente in piuma, oltre a uno strato base ben caldo specificamente per la notte nel cratere — le temperature a 5.730 m scendono regolarmente ben al di sotto di quanto la maggior parte degli escursionisti sperimenta altrove sulla montagna.",
+    },
+  ],
+  hubSummary:
+    "Il nostro itinerario Lemosho più lungo ed esclusivo aggiunge una notte di acclimatamento extra e una rara notte in campeggio all'interno del cratere sommitale del Kilimangiaro.",
+  hubImage: {src: '/images/packages/hub/card-8-days-lemosho.webp', alt: 'Route Lemosho in 9 giorni'},
+}
+
 const rongai7It: TripIt = {
   slug: '7-days-rongai-route',
   category: 'package',
@@ -1489,6 +1698,158 @@ const rongai7It: TripIt = {
   hubSummary:
     "Affrontando il Kilimangiaro da nord, questo itinerario offre una prospettiva unica della montagna ed è perfetto per chi…",
   hubImage: {src: '/images/packages/hub/card-7-days-rongai.webp', alt: 'Route Rongai in 7 giorni'},
+}
+
+const rongai6It: TripIt = {
+  slug: '6-days-rongai-route',
+  category: 'package',
+  name: '6 Giorni Route Rongai',
+  durationDays: 6,
+  seoTitle: '6 Giorni Route Rongai | Climbing Kilimanjaro Tanzania',
+  seoDescription: 'Itinerario giorno per giorno reale, prezzi e servizi inclusi per il pacchetto 6 Giorni Route Rongai.',
+  stopsLine: 'Nalemoru Gate, Simba Camp, Kikelewa Camp, Mawenzi Tarn, Kibo Hut, Horombo Hut, Marangu Gate',
+  priceDisclaimer:
+    "*Il prezzo per persona include: una guida di montagna professionista, le tasse di ingresso al parco, tutti i pernottamenti in campeggio, i pasti durante il trekking, i trasferimenti da/per l'ingresso del parco e un soggiorno in hotel a Moshi/Arusha dopo la scalata.",
+  overviewBody: [
+    "La route Rongai è l'unico itinerario che affronta il Kilimangiaro dal versante settentrionale, vicino al confine con il Kenya, offrendo un'esperienza più tranquilla e isolata, con paesaggi in salita costante e meno affollamento. Questa versione in sei giorni condensa l'itinerario standard combinando due delle tappe più dolci della parte bassa della montagna in un'unica giornata di trekking più lunga, il che la rende una buona scelta per chi ha meno tempo a disposizione o ha già esperienza in alta quota.",
+    "Attraverserai una rigogliosa foresta pluviale, brughiere aperte e un deserto alpino d'alta quota in salita, per poi scendere dal versante di Marangu passando per Horombo Hut, fino a raggiungere infine la vetta di Uhuru Peak — il punto più alto dell'Africa.",
+  ],
+  mapImage: {src: '/images/packages/7-days-rongai-route/hero.png', alt: 'Mappa della route Rongai in 6 giorni'},
+  gallery: [
+    {src: '/images/packages/shared/gallery-generic-1.jpg', alt: 'Il Kilimangiaro sopra la savana di acacie'},
+    {src: '/images/packages/shared/approaching-kilimanjaro.jpg', alt: 'Scalatori che si avvicinano alla vetta nella neve'},
+    {src: '/images/packages/shared/7-days-rongai-routes-1.webp', alt: 'Route Rongai in 7 giorni'},
+    {src: '/images/packages/7-days-rongai-route/simba-camp-2.jpg', alt: 'Simba Camp'},
+    {src: '/images/packages/shared/kilimanjaro-climb.webp', alt: 'Scalatori sul sentiero'},
+    {src: '/images/packages/shared/6-days-umbwe-route.webp', alt: 'Route Umbwe in 6 giorni'},
+  ],
+  itinerary: [
+    arrivalIt,
+    {
+      day: 1,
+      label: 'Da Nalemoru Gate a Simba Camp',
+      location: 'Nalemoru Gate (1.950 m) → Simba Camp (2.600 m)',
+      meta: ['Dislivello in salita: 650 m (2.133 piedi)', 'Durata: 5 ore'],
+      body: [
+        "Il tuo trekking inizia da Nalemoru Gate, sul versante settentrionale più tranquillo del Kilimangiaro, vicino al confine con il Kenya. Dopo la registrazione presso il parco nazionale, segui una salita graduale attraverso la foresta montana — tieni gli occhi aperti per i colobi e gli uccelli della foresta — prima di arrivare a Simba Camp, ai margini della brughiera.",
+      ],
+      overnightStay: 'Simba Camp',
+      image: {src: '/images/packages/7-days-rongai-route/day1-simba-camp.jpg', alt: 'Cartello di Simba Camp'},
+      secondImage: {src: '/images/packages/7-days-rongai-route/day1-simba-camp-2.jpg', alt: 'Simba Camp'},
+    },
+    {
+      day: 2,
+      label: 'Da Simba Camp a Kikelewa Camp',
+      location: 'Simba Camp (2.600 m) → Kikelewa Camp (3.600 m)',
+      meta: ['Dislivello in salita: 1.000 m (3.281 piedi)', 'Durata: 6-7 ore'],
+      body: [
+        "Una giornata più lunga che combina due delle tappe più dolci dell'itinerario standard in una sola. Il sentiero si apre su erica e brughiera, passando per Second Cave a circa metà percorso — un buon punto per una pausa pranzo al sacco — prima di proseguire fino a Kikelewa Camp, adagiato in una valle riparata con ampie vedute sul Mawenzi e sulle pianure sottostanti.",
+      ],
+      overnightStay: 'Kikelewa Camp',
+      image: {src: '/images/packages/7-days-rongai-route/day3-kikelewa-camp.jpg', alt: 'Kikelewa Camp'},
+      secondImage: {
+        src: '/images/packages/7-days-rongai-route/day2-second-cave.webp',
+        alt: 'Second Cave, la sosta pranzo lungo il percorso verso Kikelewa',
+      },
+    },
+    {
+      day: 3,
+      label: 'Da Kikelewa Camp a Mawenzi Tarn',
+      location: 'Kikelewa Camp (3.600 m) → Mawenzi Tarn (4.330 m)',
+      meta: ['Dislivello in salita: 730 m (2.395 piedi)', 'Durata: 4 ore'],
+      body: [
+        "Una salita breve ma costantemente ripida verso la brughiera d'alta quota, costeggiata da lobelie giganti e senecio. Mawenzi Tarn Camp si trova in un drammatico circo ai piedi del Mawenzi, la seconda vetta più alta del Kilimangiaro — un luogo spettacolare per riposare e lasciare che il corpo si adatti alla quota.",
+      ],
+      overnightStay: 'Mawenzi Tarn Camp',
+      image: {src: '/images/packages/7-days-rongai-route/day4-mawenzi-tarn.jpg', alt: 'Mawenzi Tarn Camp'},
+    },
+    {
+      day: 4,
+      label: 'Da Mawenzi Tarn a Kibo Hut',
+      location: 'Mawenzi Tarn (4.330 m) → Kibo Hut (4.700 m)',
+      meta: ['Dislivello in salita: 370 m (1.214 piedi)', 'Durata: 5 ore'],
+      body: [
+        "Attraversa la Sella, il paesaggio lunare tra il Mawenzi e il Kibo, le due vette più alte del Kilimangiaro, raggiungendo Kibo Hut nel primo pomeriggio. Con una cena anticipata e il riposo ben prima del tramonto, questa breve giornata serve soprattutto a riposare e prepararsi al tentativo di vetta che inizia quella stessa notte.",
+      ],
+      overnightStay: 'Kibo Hut (rifugio tipo dormitorio)',
+      image: {src: '/images/packages/7-days-rongai-route/day5-kibo-hut.webp', alt: 'Kibo Hut'},
+      secondImage: {src: '/images/packages/7-days-rongai-route/day5-kibo-hut-1.jpg', alt: 'Edificio in pietra di Kibo Hut'},
+    },
+    {
+      day: 5,
+      label: 'Da Kibo Hut a Uhuru Peak e poi a Horombo Hut',
+      location: 'Kibo Hut (4.700 m) → Uhuru Peak (5.895 m) → Horombo Hut (3.720 m)',
+      meta: ['Dislivello in salita: 1.195 m (3.920 piedi)', 'Dislivello in discesa: 2.175 m (7.136 piedi)', 'Durata: 14 ore'],
+      body: [
+        "La tua guida ti sveglia verso mezzanotte per tè e biscotti prima che inizi la salita finale. Il sentiero sale con costanza passando per Hans Meyer Cave fino a Gilman's Point, sul bordo del cratere, per poi proseguire — spesso sulla neve — fino a Uhuru Peak, il tetto dell'Africa. Dopo aver festeggiato in vetta, una lunga discesa ti riporta a Kibo Hut per un pranzo caldo, per poi proseguire fino a Horombo Hut per una cena e un riposo meritati.",
+      ],
+      overnightStay: 'Horombo Hut (rifugio tipo dormitorio)',
+      image: {src: '/images/packages/7-days-rongai-route/day6-uhuru-peak.webp', alt: 'Vetta di Uhuru Peak'},
+      secondImage: {src: '/images/packages/7-days-rongai-route/day6-horombo-hut-2.jpeg', alt: 'Horombo Hut'},
+    },
+    {
+      day: 6,
+      label: 'Da Horombo Hut a Marangu Gate',
+      location: 'Horombo Hut (3.720 m) → Marangu Gate (1.980 m)',
+      meta: ['Dislivello in discesa: 1.740 m (5.709 piedi)', 'Durata: 6 ore'],
+      body: [
+        "Una meritata festa con il tuo team — tra canti e balli — apre la tua ultima mattina. Scendi attraverso la rigogliosa foresta pluviale fino a Marangu Gate, dove firmerai il registro e riceverai il tuo certificato di vetta prima del trasferimento a Moshi per una doccia calda e una vera celebrazione.",
+      ],
+      image: {src: '/images/packages/7-days-rongai-route/day7-marangu-gate-descent.jpg', alt: 'Discesa verso Marangu Gate'},
+      secondImage: {src: '/images/packages/7-days-rongai-route/day7-horombo-hut-1.jpg', alt: 'Horombo Hut'},
+    },
+    departureIt,
+  ],
+  includes: includesVariantBIt,
+  excludes: excludesVariantBIt,
+  faqHeading: 'FAQ Route Rongai in 6 giorni',
+  faqIntro:
+    "Hai domande sulla route Rongai in 6 giorni? Consulta le nostre FAQ qui sotto per risposte chiare e utili. Se non trovi quello che cerchi, non esitare a contattarci — i nostri esperti di montagna di Asili Climbing Kilimanjaro sono qui per aiutarti a pianificare un'avventura in vetta sicura, riuscita e indimenticabile.",
+  faqs: [
+    {
+      question: 'In cosa differisce la route Rongai in 6 giorni dalla versione in 7 giorni?',
+      answer:
+        "L'itinerario in sei giorni combina due delle tappe più dolci della parte bassa della montagna — da Simba Camp a Second Cave, e da Second Cave a Kikelewa — in un'unica giornata di trekking più lunga. Il resto segue esattamente lo stesso percorso, gli stessi campi e la stessa notte di vetta della route in 7 giorni, semplicemente con un giorno di acclimatamento in meno.",
+    },
+    {
+      question: 'Sei giorni sono sufficienti per acclimatarsi bene sulla route Rongai?',
+      answer:
+        "Possono esserlo, specialmente per chi ha già una certa esperienza in alta quota — il profilo di salita graduale della route Rongai offre comunque un vantaggio reale rispetto a itinerari più ripidi. Detto questo, se è la tua prima volta sopra i 4.000 m, ti consigliamo la versione in 7 giorni per avere migliori possibilità di raggiungere la vetta comodamente.",
+    },
+    {
+      question: 'Qual è il tasso di successo su questo itinerario?',
+      answer:
+        "L'itinerario Rongai in 6 giorni ha un buon tasso di successo, anche se leggermente inferiore rispetto alla versione in 7 giorni semplicemente perché include un giorno di acclimatamento in meno. La tua guida ti monitorerà da vicino durante tutto il percorso e regolerà il ritmo se necessario.",
+    },
+    {
+      question: 'La route Rongai è meno affollata rispetto agli altri itinerari del Kilimangiaro?',
+      answer:
+        "Sì. È l'unico itinerario che affronta il Kilimangiaro da nord, vicino al confine con il Kenya, e richiede il viaggio in auto più lungo per raggiungere l'inizio del sentiero — il che lo rende notevolmente più tranquillo rispetto a route come Machame o Marangu.",
+    },
+    {
+      question: 'Come sono gli alloggi su questo itinerario?',
+      answer:
+        "Dormirai in tende da montagna di qualità per le prime quattro notti, poi in rifugi tipo dormitorio a Kibo e Horombo. Forniamo una tenda toilette privata per tutto il trekking per un comfort maggiore.",
+    },
+    {
+      question: 'Questo itinerario è una buona scelta durante la stagione delle piogge?',
+      answer:
+        "Sì — il versante settentrionale del Kilimangiaro riceve notevolmente meno pioggia rispetto agli approcci meridionali, il che rende Rongai una scelta intelligente se scali nelle stagioni intermedie tra marzo e maggio o a novembre.",
+    },
+    {
+      question: 'Cosa succede durante la notte di vetta?',
+      answer:
+        "Lascerai Kibo Hut verso mezzanotte, salendo di notte passando per Hans Meyer Cave e Gilman's Point per raggiungere Uhuru Peak intorno all'alba, seguita da una lunga discesa fino a Horombo Hut nello stesso giorno. È la giornata più impegnativa del trekking, ma le nostre guide ti accompagnano passo dopo passo.",
+    },
+    {
+      question: 'Posso abbinare questa scalata a un safari in Tanzania?',
+      answer:
+        "Assolutamente. Offriamo estensioni safari personalizzate dopo la tua scalata — il Serengeti, il cratere del Ngorongoro o un soggiorno rilassante a Zanzibar sono aggiunte molto apprezzate.",
+    },
+  ],
+  hubSummary:
+    "Una versione più rapida del tranquillo itinerario settentrionale — sei giorni da Nalemoru Gate a Uhuru Peak, con meno affollamento rispetto ai classici approcci meridionali.",
+  hubImage: {src: '/images/packages/hub/card-7-days-rongai.webp', alt: 'Route Rongai in 6 giorni'},
 }
 
 const umbwe6It: TripIt = {
@@ -2858,7 +3219,9 @@ async function run() {
   await seedTripIt(marangu6It)
   await seedTripIt(lemosho7It)
   await seedTripIt(lemosho8It)
+  await seedTripIt(lemosho9It)
   await seedTripIt(rongai7It)
+  await seedTripIt(rongai6It)
   await seedTripIt(umbwe6It)
   await seedTripIt(northernCircuit9It)
   await seedTripIt(combo9It)
@@ -2867,7 +3230,7 @@ async function run() {
   await seedTripIt(combo12It)
   await seedSafariIt(safari15It)
   await seedSafariIt(safari10HoneymoonIt)
-  console.log('done — all 15 trips seeded')
+  console.log('done — all 17 trips seeded')
 }
 
 run().catch((err) => {
